@@ -38,7 +38,7 @@ const MORSE_TABLE = {
 };
 
 function decode(expr) {
-    MORSE_TABLE['*'] = ' ';
+   MORSE_TABLE['*'] = ' ';
    let result ='';
    for (i=0; i<expr.length; i += 10) {
 result += MORSE_TABLE[expr.slice(0 + i, 10 + i).replaceAll('10', '.').replaceAll('11','-').replaceAll('00','').replaceAll('**********','*')]; 
